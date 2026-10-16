@@ -59,6 +59,7 @@
             display: flex;
             gap: 20px;
             list-style: none;
+            align-items: center;
         }
 
         .nav-links a {
@@ -89,7 +90,14 @@
             font-size: 1.2rem;
             color: var(--text-secondary);
             max-width: 750px;
-            margin: 0 auto 2.5rem auto;
+            margin: 0 auto 2rem auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .grid {
@@ -97,7 +105,7 @@
             margin: 0 auto 4rem auto;
             padding: 0 2rem;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1f));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -221,6 +229,7 @@
                 <li><a href="#downloads">Downloads</a></li>
                 <li><a href="#docs">Documentation</a></li>
                 <li><a href="#setup">Desktop Setup</a></li>
+                <li><a href="https://github.com/petermeshack/NAIROBIHUB" target="_blank" class="btn btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.9rem;"><i class="fa-brands fa-github"></i> Source Code</a></li>
             </ul>
         </div>
     </header>
@@ -228,7 +237,10 @@
     <section class="hero">
         <h1>Decentralized Local Sharing for Nairobi County</h1>
         <p>Connect desktop and mobile devices seamlessly over custom tunnels. Share files, folders, and resources with real-time network telemetry and offline access.</p>
-        <a href="#downloads" class="btn"><i class="fa-solid fa-download"></i> Get Started & Download</a>
+        <div class="hero-buttons">
+            <a href="#downloads" class="btn"><i class="fa-solid fa-download"></i> Get Started & Download</a>
+            <a href="https://github.com/petermeshack/NAIROBIHUB" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View Source Code</a>
+        </div>
     </section>
 
     <section class="grid" id="downloads">
@@ -303,7 +315,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 Nairobi County DES File Hub | Built for Seamless Local & Remote Sharing</p>
+        <p>&copy; 2026 Nairobi County DES File Hub | Built for Seamless Local & Remote Sharing | <a href="https://github.com/petermeshack/NAIROBIHUB" target="_blank" style="color: var(--accent-green); text-decoration: none;">GitHub Repository</a></p>
     </footer>
 
 </body>
