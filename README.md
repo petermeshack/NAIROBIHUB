@@ -1,36 +1,25 @@
 # Nairobi County DES File Hub
 
-**Nairobi County DES File Hub** is a robust cross-platform application designed for secure shared spaces, resource management, and file collaboration. It provides seamless connectivity between desktop and mobile environments, supporting public/private file attachments, bookmarking, offline caching, and administrative oversight.
+Welcome to the **Nairobi County DES File Hub** repository! This application is designed to facilitate secure resource sharing, collaborative file management, and real-time network telemetry across connected spaces. It features both a **Desktop App** (Python/PySide6) and an **Android App** (Kotlin/Jetpack Compose), allowing seamless cross-device synchronization and offline access.
 
 ---
 
-## 🚀 Application Versions
+## 🚀 Key Features
 
-*   **Desktop App (PC):** Built with Python and PySide6, featuring advanced networking telemetry, dark/light theme support, a built-in Flask backend server, and complete hosting controls.
-*   **Android App:** Built with Kotlin and Jetpack Compose, offering mobile accessibility, bookmarking, offline mode synchronization, and channel scanning on the go.
-
----
-
-## 📥 Download Compiled Binaries
-
-You can download the pre-compiled binaries and installation packages directly from Google Drive:
-
-*   💻 **[Download PC Desktop App Binaries](https://drive.google.com/drive/folders/1xTmSO8E_OKxu9fnNp2GAJAfIvNpt4iDk?usp=sharing)**
-*   📱 **[Download Android App APKs](https://drive.google.com/drive/folders/1sicespHBRmdrcUwHK01LmEJ67l5Owq45?usp=sharing)**
+* **Multi-Platform Support:** Fully functional Desktop application and Android mobile application.
+* **Shared Space Hosting:** Host your own space, issue secure space access keys, and manage network tunnels using `.loca.lt`.
+* **Resource Management:** Organize, upload, and browse folders, documents, spreadsheets, images, audio, and video files with granular public/private access settings.
+* **Bookmarks & Offline Mode:** Star your favorite items and save resources locally for offline viewing when the server is unreachable.
+* **Moderator Tools:** Comprehensive user permission management (ban, timeout, revoke read/write access, assign moderators) and file moderation oversight.
+* **Customizable Settings:** Personalize color themes, accent colors, font scaling, sound alerts, and notification filters.
 
 ---
 
-## 📚 Documentation & Resources
+## 🛠️ Prerequisites for Hosting
 
-*   📖 **[Official User Manual (Google Doc)](https://docs.google.com/document/d/1IlcOepl2i1W947-BoTPd_w7G7NtBQshhdIBPwBqSdW4/edit?tab=t.0#heading=h.yv1dxbu496wy)**: Comprehensive step-by-step instructions on connecting to spaces, managing files, hosting, and customizing app settings.
-*   📊 **[Presentation Slides](https://docs.google.com/presentation/d/1W8kG-XSRNlJzxyUxdDpC9RyNHgrbdMa4k29geEKlW4A/edit?slide=id.p1#slide=id.p1)**: Visual overview of the application features and architecture.
+To successfully run and host shared spaces with public URLs using `.loca.lt`, your machine **must** have **Node.js** installed and the **LocalTunnel** package available globally.
 
----
-
-## ✨ Key Features
-
-*   **Shared Spaces:** Connect to local or remote spaces using secure space access keys and real-time tunneling (`.loca.lt`).
-*   **Resource Management:** Upload, organize, edit, and categorize links and files (folders, documents, spreadsheets, presentations, media).
-*   **Offline Access & Bookmarks:** Save items for offline viewing or bookmark frequently used resources for quick access.
-*   **Moderator & Administrative Tools:** Oversee connected users, monitor network latency, manage permissions, time out or ban users, and toggle file visibility.
-*   **Customizable Settings:** Personalize your color theme, accent colors, font scaling, notifications, and storage directories.
+1. **Install Node.js:** Download and install Node.js from [nodejs.org](https://nodejs.org/).
+2. **Install LocalTunnel:** Open your terminal or command prompt and run the following command globally:
+   ```bash
+   npm install -g localtunnel
