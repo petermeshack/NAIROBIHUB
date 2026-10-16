@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi County DES File Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0B130F;
+            --card-bg: #132219;
+            --accent-green: #22C55E;
+            --accent-hover: #16A34A;
+            --border-color: #1E3A29;
+            --text-primary: #F1F5F9;
+            --text-secondary: #A3B8CC;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-green);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-green);
+        }
+
+        .hero {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto 2.5rem auto;
+        }
+
+        .grid {
+            max-width: 1100px;
+            margin: 0 auto 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1f));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent-green);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: var(--accent-green);
+            color: #FFFFFF;
+            font-weight: bold;
+            padding: 0.8rem 1.2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: var(--border-color);
+            color: var(--text-primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: #2D5A3C;
+        }
+
+        .requirements {
+            max-width: 1100px;
+            margin: 0 auto 4rem auto;
+            padding: 2rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+        }
+
+        .requirements h2 {
+            color: var(--accent-green);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .code-block {
+            background-color: #050B08;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1rem;
+            margin: 1rem 0;
+            font-family: 'Consolas', monospace;
+            color: var(--accent-green);
+            overflow-x: auto;
+        }
+
+        footer {
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-network-wired"></i> Nairobi County DES File Hub
+            </div>
+            <ul class="nav-links">
+                <li><a href="#downloads">Downloads</a></li>
+                <li><a href="#docs">Documentation</a></li>
+                <li><a href="#setup">Desktop Setup</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Decentralized Local Sharing for Nairobi County</h1>
+        <p>Connect desktop and mobile devices seamlessly over custom tunnels. Share files, folders, and resources with real-time network telemetry and offline access.</p>
+        <a href="#downloads" class="btn"><i class="fa-solid fa-download"></i> Get Started & Download</a>
+    </section>
+
+    <section class="grid" id="downloads">
+        <!-- PC Download -->
+        <div class="card">
+            <div>
+                <div class="card-icon"><i class="fa-solid fa-desktop"></i></div>
+                <h3>Desktop App (PC)</h3>
+                <p>Full-featured PySide6 application with hosting controls, real-time bandwidth telemetry, user permissions, and moderator tools.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1xTmSO8E_OKxu9fnNp2GAJAfIvNpt4iDk?usp=sharing" target="_blank" class="btn">
+                <i class="fa-solid fa-folder-open"></i> Download PC Executable
+            </a>
+        </div>
+
+        <!-- Android Download -->
+        <div class="card">
+            <div>
+                <div class="card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                <h3>Android App</h3>
+                <p>Kotlin & Jetpack Compose mobile client. Connect to spaces on the go, search channels, bookmark files, and save resources offline.</p>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1sicespHBRmdrcUwHK01LmEJ67l5Owq45?usp=sharing" target="_blank" class="btn">
+                <i class="fa-solid fa-android"></i> Download Android APK
+            </a>
+        </div>
+    </section>
+
+    <section class="grid" id="docs">
+        <!-- Manual -->
+        <div class="card">
+            <div>
+                <div class="card-icon"><i class="fa-solid fa-file-lines"></i></div>
+                <h3>Official User Manual</h3>
+                <p>Step-by-step documentation explaining how to connect to spaces, attach links, manage user access, and configure settings.</p>
+            </div>
+            <a href="https://docs.google.com/document/d/1IlcOepl2i1W947-BoTPd_w7G7NtBQshhdIBPwBqSdW4/edit?tab=t.0#heading=h.yv1dxbu496wy" target="_blank" class="btn btn-secondary">
+                <i class="fa-solid fa-external-link"></i> Open Google Doc
+            </a>
+        </div>
+
+        <!-- Slides -->
+        <div class="card">
+            <div>
+                <div class="card-icon"><i class="fa-solid fa-file-powerpoint"></i></div>
+                <h3>Presentation Slides</h3>
+                <p>A slide deck summarizing the features, architecture, and operation of the Nairobi County DES File Hub platform.</p>
+            </div>
+            <a href="https://docs.google.com/presentation/d/1W8kG-XSRNlJzxyUxdDpC9RyNHgrbdMa4k29geEKlW4A/edit?slide=id.p1#slide=id.p1" target="_blank" class="btn btn-secondary">
+                <i class="fa-solid fa-chart-pie"></i> View Slide Deck
+            </a>
+        </div>
+    </section>
+
+    <!-- Setup Requirements -->
+    <div class="requirements" id="setup">
+        <h2><i class="fa-solid fa-server"></i> Desktop Hosting Prerequisites</h2>
+        <p>To host a public space from the <strong>Desktop App</strong>, your computer requires Node.js and Localtunnel to generate secure <code>.loca.lt</code> connection tunnels.</p>
+        
+        <ol style="margin-left: 1.5rem; margin-top: 1rem; color: var(--text-secondary);">
+            <li>Download and install <strong><a href="https://nodejs.org/" target="_blank" style="color: var(--accent-green);">Node.js</a></strong> (LTS Version recommended).</li>
+            <li>Open your terminal or command prompt and install <strong>Localtunnel</strong> globally:</li>
+        </ol>
+
+        <div class="code-block">
+            npm install -g localtunnel
+        </div>
+
+        <p style="color: var(--text-secondary); font-size: 0.9rem;">
+            <i class="fa-solid fa-circle-info" style="color: var(--accent-green);"></i> Once installed, you can launch the Desktop App and click <strong>"Go Live & Start Hosting"</strong> to broadcast your space URL.
+        </p>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Nairobi County DES File Hub | Built for Seamless Local & Remote Sharing</p>
+    </footer>
+
+</body>
+</html>
