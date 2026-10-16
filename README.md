@@ -1,25 +1,34 @@
 # Nairobi County DES File Hub
 
-Welcome to the **Nairobi County DES File Hub** repository! This application is designed to facilitate secure resource sharing, collaborative file management, and real-time network telemetry across connected spaces. It features both a **Desktop App** (Python/PySide6) and an **Android App** (Kotlin/Jetpack Compose), allowing seamless cross-device synchronization and offline access.
+The **Nairobi County DES File Hub** is a multi-device file-sharing, resource management, and collaboration ecosystem tailored for Nairobi County DES operations. It bridges desktop workstations and mobile Android devices to facilitate seamless space hosting, file exploration, moderation, and secure sharing.
 
 ---
 
-## 🚀 Key Features
+## 📦 Downloads & Binaries
 
-* **Multi-Platform Support:** Fully functional Desktop application and Android mobile application.
-* **Shared Space Hosting:** Host your own space, issue secure space access keys, and manage network tunnels using `.loca.lt`.
-* **Resource Management:** Organize, upload, and browse folders, documents, spreadsheets, images, audio, and video files with granular public/private access settings.
-* **Bookmarks & Offline Mode:** Star your favorite items and save resources locally for offline viewing when the server is unreachable.
-* **Moderator Tools:** Comprehensive user permission management (ban, timeout, revoke read/write access, assign moderators) and file moderation oversight.
-* **Customizable Settings:** Personalize color themes, accent colors, font scaling, sound alerts, and notification filters.
+Get the latest compiled application binaries for your platform:
+
+*   🖥️ **[PC / Desktop App Binaries](https://drive.google.com/drive/folders/1xTmSO8E_OKxu9fnNp2GAJAfIvNpt4iDk?usp=sharing)**
+*   📱 **[Android Mobile App Binaries](https://drive.google.com/drive/folders/1sicespHBRmdrcUwHK01LmEJ67l5Owq45?usp=sharing)**
 
 ---
 
-## 🛠️ Prerequisites for Hosting
+## 📚 Documentation & Resources
 
-To successfully run and host shared spaces with public URLs using `.loca.lt`, your machine **must** have **Node.js** installed and the **LocalTunnel** package available globally.
+*   📄 **[User Manual (Google Doc)](https://docs.google.com/document/d/1IlcOepl2i1W947-BoTPd_w7G7NtBQshhdIBPwBqSdW4/edit?tab=t.0#heading=h.yv1dxbu496wy)**
+*   📊 **[Presentation Slides](https://docs.google.com/presentation/d/1W8kG-XSRNlJzxyUxdDpC9RyNHgrbdMa4k29geEKlW4A/edit?slide=id.p1#slide=id.p1)**
 
-1. **Install Node.js:** Download and install Node.js from [nodejs.org](https://nodejs.org/).
-2. **Install LocalTunnel:** Open your terminal or command prompt and run the following command globally:
-   ```bash
-   npm install -g localtunnel
+---
+
+## ⚙️ Running Your Own Server
+
+To host your own shared space and make it accessible across networks using `.loca.lt` tunneling, your server environment must meet the following prerequisites:
+
+1.  **Node.js Installed:** Ensure you have [Node.js](https://nodejs.org/) installed and available in your system path.
+2.  **Localtunnel Package:** Install the `localtunnel` package globally via npm so the server can generate public tunnels (`.loca.lt` addresses):
+
+```bash
+npm install -g localtunnel
+```
+
+Once Node.js and localtunnel are configured, start your host application to broadcast your shared space.
